@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ucapan Ulang Tahun</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0; 
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: white;
+            font-family: 'Caveat', cursive;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        .content {
+            width: 100%;
+            color: #161D6F;
+            padding: 20px;
+        }
+
+        .row {
+            padding: 6vw 0;
+            width: 100%;
+            min-height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top: 5px solid white;
+            border-bottom: 5px solid white;
+            font-size: 4vw;
+            font-weight: bold;
+            position: relative;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            line-height: 1.5;
+        }
+
+        .video {
+            padding: 6vw 0;
+        }
+
+        iframe {
+            width: 80%;
+            max-width: 560px;
+            height: 315px;
+            padding: 20px;
+            border: 3px solid black;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Background Color */
+        #k1 { background-color: #FCD1D1; }
+        #k2 { background-color: #AEE1E1; }
+        #k3 { background-color: #D3E0DC; }
+        #k4 { background-color: #F9DFDC; }
+
+        /* Animasi Muncul */
+        .row {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .row.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Pesan Spesial */
+        .hidden-message {
+            display: none;
+            font-size: 4vw;
+            color: white;
+            background-color: #a03ea0;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            animation: fadeIn 1s ease-in-out;
+            line-height: 1.6;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* Tombol */
+        .btn-special {
+            margin-top: 30px;
+            padding: 20px 40px;
+            font-size: 3.5vw;
+            background-color: #ec5ae2;
+            color: black;
+            border: none;
+            border-radius: 15px;
+            cursor:zoom-in;
+            font-weight: bold;
+            box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .btn-special:hover {
+            background-color: #d4419c;
+            transform: scale(1.1);
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="content">
+    <div class="row" id="k1">
+        <h2>🎵 Klik dulu biar gak sepi! 🎵</h2>
+    </div>
+    <div class="video">
+        <iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/fK7SR-i6pIg"
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+</iframe>
+
+
+    </div>
+    <div class="row" id="k2">
+        <h2>Scroll yuk! 😉</h2>
+    </div>
+
+    <div class="row" id="k3"><h4>🎉 Hallo kamu! kesayanganku 🤗</h4></div>
+    <div class="row" id="k4"><h4>🎂 Yang lagi ulang tahun! 🥳</h4></div>
+    <div class="row" id="k1"><h4>🎈 Udah tambah tua nih, ga bocil lagi yey😝</h4></div>
+    <div class="row" id="k2"><h4>Sehat selalu ya! 😇</h4></div>
+    <div class="row" id="k3"><h4>✨ Harus lebih baik lagi ☺</h4></div><div class="row" id="k4"><h4>💪 Jangan males-malesan 😙</h4></div>
+    <div class="row" id="k1"><h4>📖 Rajin belajar! 🤩</h4></div>
+    <div class="row" id="k2"><h4>💖 Jangan cepet nyerah! 🥰</h4></div>
+    <div class="row" id="k3"><h4>🤭 I always pray and hope the best for you 😉</h4></div>
+    <div class="row" id="k4"><h4>Sayang kamu banyak banyakkk💕💖</h4></div>
+    <div class="row" id="k1"><h4>😋 lovvuuuuuulovvvlovvvvvuuuu moreeeee</h4></div>
+    <div class="row" id="k2"><h4>💝 Wish you all the best! 😍</h4></div>
+    <div class="row" id="k4"><h4>👋 Babay! 😘🥳</h4></div>
+
+    <!-- Tombol Pesan Spesial -->
+    <button class="btn-special" onclick="showMessage()">Klik untuk lihat pesan spesial 🎁</button>
+    <div id="special-message" class="hidden-message">🎊 Selamat ulang tahun!I LOVE UU 🎊 <br> Semoga semua harapan dan impianmu tercapai! 💖 aku selalu berharap yang terbaik untukmu, semoga dilancarkan rezekinya dimudahkan segala urusan, panjang umur sehat selalu, maaciii uda ada di hidupku sayang bangeettt samaa ugaa dan aku selalu sayang kamu berharap kita akan selalu terus bersama lovvveeuuuu moreee cintaaaa, SELAMAT BERTAMBAH USIA💕😘💟</div>
+</div>
+
+<script>
+    // Animasi muncul saat scroll
+    function revealRows() {
+        let rows = document.querySelectorAll('.row');
+        let windowHeight = window.innerHeight;
+        
+        rows.forEach(row => {
+            let position = row.getBoundingClientRect().top;
+            if (position < windowHeight - 50) {
+                row.classList.add('show');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', revealRows);
+    revealRows(); // Trigger pertama kali
+
+    // Menampilkan pesan spesial saat tombol diklik
+    function showMessage() {
+        let message = document.getElementById('special-message');
+        message.style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
